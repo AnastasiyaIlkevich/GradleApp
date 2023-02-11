@@ -8,6 +8,8 @@ plugins{
     id 'java'
 }
 
+sourceCompatibility = '17'
+
 repositories {
     mavenLocal()
 }
@@ -16,4 +18,15 @@ jar {
     manifest{
         attributes 'Main-Class': 'ru.clevertec.ilkevich.Application'
     }
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.7'
+
+
+    testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
+}
+
+test {
+    useJUnitPlatform()
 }
